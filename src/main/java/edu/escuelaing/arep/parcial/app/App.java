@@ -25,7 +25,7 @@ public class App {
     */
     public static void main(String[] args) {
         port(getPort());
-		get("/hello", (req, res) -> "Hello Heroku");
+		get("/hello", (req, res) -> "Hello Don Santiago");
         get("/log", (req, res) -> resultLog(req, res));
 		get("/acos", (req, res) -> resultAcos(req, res));
     }
