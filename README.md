@@ -332,7 +332,22 @@ docker tag dockersparkprimer donsantiagos/parcialarep2
 ![](./resources/push.PNG)
 
 
-17. Se instalo Docker en la maquina virtual de AWS
+17. Se realiza la apertura de la maquina virtual en AWS y Se instala Docker en la maquina virtual de AWS
+
+![](./resources/aws (1).jpeg)
+![](./resources/aws (2).jpeg)
+![](./resources/aws (3).jpeg)
+![](./resources/aws (4).jpeg)
+![](./resources/aws (5).jpeg)
+![](./resources/aws (6).jpeg)
+![](./resources/aws (7).jpeg)
+![](./resources/aws (9).jpeg)
+![](./resources/aws (10).jpeg)
+![](./resources/aws (11).PNG)
+
+Posteriormente se siguen los pasos de la imagen anterios y se debe ver asi:
+
+![](./resources/aws (12).PNG)
 
 sudo yum update -y
 sudo yum install docker
@@ -344,6 +359,11 @@ sudo service docker start
 19. Apartir de la imagen creada en DockerHub se creo una instancia de un contenedor docker
 
 docker run -d -p 42000:6000 --name firstdockerimageaws donsantiagos/parcialarep2
+
+![](./resources/aws (13).PNG)
+
+![](./resources/aws (14).jpeg)
+![](./resources/aws (15).jpeg)
 
 ### Pre requisitos 
 
@@ -441,14 +461,12 @@ Entregable:
 
 ## Pruebas
 
-Se realizaron una serie de pruebas con el conjunto de numeros ubicado en [Pruebas.txt](https://github.com/DonSantiagoS/LAB1AREP.git/Pruebas.txt)
+Se adjunta video con la demostracion:
 
-arrojando los siguientes resultados
+y las respectivas imagenes
 
-usando este codigo como proyeccion de las pruebas que se realizaron:
-
-```
-```
+![](./resources/acos.PNG)
+![](./resources/log.PNG)
 
 
 ## Construccion
