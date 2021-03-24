@@ -330,14 +330,23 @@ docker tag dockersparkprimer donsantiagos/parcialarep2
 17. Se realiza la apertura de la maquina virtual en AWS y Se instala Docker en la maquina virtual de AWS
 
 ![](./resources/aws (1).jpeg)
+
 ![](./resources/aws (2).jpeg)
+
 ![](./resources/aws (3).jpeg)
+
 ![](./resources/aws (4).jpeg)
+
 ![](./resources/aws (5).jpeg)
+
 ![](./resources/aws (6).jpeg)
+
 ![](./resources/aws (7).jpeg)
+
 ![](./resources/aws (9).jpeg)
+
 ![](./resources/aws (10).jpeg)
+
 ![](./resources/aws (11).PNG)
 
 Posteriormente se siguen los pasos de la imagen anterios y se debe ver asi:
@@ -358,6 +367,7 @@ docker run -d -p 42000:6000 --name firstdockerimageaws donsantiagos/parcialarep2
 ![](./resources/aws (13).PNG)
 
 ![](./resources/aws (14).jpeg)
+
 ![](./resources/aws (15).jpeg)
 
 ### Pre requisitos 
