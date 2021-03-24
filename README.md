@@ -329,7 +329,7 @@ docker tag dockersparkprimer donsantiagos/parcialarep2
 
 17. Se realiza la apertura de la maquina virtual en AWS y Se instala Docker en la maquina virtual de AWS
 
-![](./resources/aws (1).jpeg)
+![](./resources/aws_(1).jpeg)
 
 ![](./resources/aws (2).jpeg)
 
