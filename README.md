@@ -1,10 +1,5 @@
 # PARCIAL CORTE 2
 
-Aplicacion para consultar el clima de la ciudad que desee segun el reporte de la API gratuita de https://openweathermap.org/ de **Current Weather Data**
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://lit-inlet-70387.herokuapp.com/clima?lugar=london)
-
-## README
 
 Se creo una apliacion con la cual es posible consulta el clima de la ciudad que desee segun el reporte de la API gratuita de https://openweathermap.org/ de **Current Weather Data** para poder realizar esto el diseño se llevo acabo de la siguiente forma:
 1. Como es de costumbre se genero el proyecto desde Maven
