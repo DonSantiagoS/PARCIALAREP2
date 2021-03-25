@@ -5,6 +5,7 @@ import java.io.IOException;
 import spark.Request;
 import spark.Response;
 import static spark.Spark.*;
+import com.google.gson.Gson;
 
 /**
  * ---------------------------------------------------------------------------------------------------------------------------
@@ -18,12 +19,14 @@ import static spark.Spark.*;
  * ---------------------------------------------------------------------------------------------------------------------------
  */
 public class App {
+	
 	/**
 	*	Main del spark quien realiza la consulta con las funciones Lampda
 	*	segun las vistas que se soliciten en la aplicacion
 	*	@param args
     */
     public static void main(String[] args) {
+		
         port(getPort());
 		get("/hello", (req, res) -> "Hello Don Santiago");
         get("/log", (req, res) -> resultLog(req, res));
@@ -43,7 +46,8 @@ public class App {
 		Double numero=Double.parseDouble(solicitud);
 		Double resultado = operacionNueva.getLog(numero);
 		String json=String.valueOf(resultado);
-		System.out.println(json);
+		Gson gson= new Gson();
+		String respuesta= gson.toJson(operacionNueva);
 		String pageContent
 				= "<!DOCTYPE html>"
 				+ "<html>"
@@ -60,13 +64,13 @@ public class App {
 				+ "</head>"
 				+"<title>OpenWeather</title>"
 				+ "<body style=\"background-color:rgb(249,255,201);\">"
-				+ "<p>" +json+ "</p>"
+				+ "<p>"+respuesta +"</p>"
 				+ "<br>"
 				+ "</body>"
 				+ "</html>";
 		return pageContent;
 	}
-
+	
 	/**
 	 *	Resultado de la aplicacion web bajo la solicitud realizada
 	 *
@@ -80,7 +84,8 @@ public class App {
 		Double numero=Double.parseDouble(solicitud);
 		Double resultado = operacionNueva.getAcos(numero);
 		String json=String.valueOf(resultado);
-		System.out.println(json);
+		Gson gson= new Gson();
+		String respuesta= gson.toJson(operacionNueva);
 		String pageContent
 				= "<!DOCTYPE html>"
 				+ "<html>"
@@ -97,12 +102,13 @@ public class App {
 				+ "</head>"
 				+"<title>OpenWeather</title>"
 				+ "<body style=\"background-color:rgb(249,255,201);\">"
-				+ "<p>" +json+ "</p>"
+				+ "<p>"+respuesta +"</p>"
 				+ "<br>"
 				+ "</body>"
 				+ "</html>";
 		return pageContent;
 	}
+	
     /**
      * This method reads the default port as specified by the PORT variable in
      * the environment.

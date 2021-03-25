@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.escuelaing.arep.parcial.app</groupId>
-  <artifactId>Parcial1</artifactId>
+  <artifactId>Parcial2</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Parcial1</name>
+  <name>Parcial2</name>
   <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,6 +36,11 @@
           <artifactId>spark-core</artifactId>
           <version>2.9.2</version>
       </dependency>
+	  <dependency>
+	  <groupId>com.google.code.gson</groupId>
+	  <artifactId>gson</artifactId>
+	  <version>2.8.6</version>
+	</dependency>
   </dependencies>
   <reporting>
 	<plugins>
@@ -72,7 +77,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>edu.escuelaing.arep.Lab1.app.App</mainClass>
+                        <mainClass>edu.escuelaing.arep.parcial.app.App</mainClass>
                     </manifest>
                 </archive>
             </configuration>

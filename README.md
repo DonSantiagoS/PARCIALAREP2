@@ -1,4 +1,4 @@
-# PARCIAL CORTE 1
+# PARCIAL CORTE 2
 
 Aplicacion para consultar el clima de la ciudad que desee segun el reporte de la API gratuita de https://openweathermap.org/ de **Current Weather Data**
 
@@ -12,94 +12,7 @@ Se creo una apliacion con la cual es posible consulta el clima de la ciudad que 
 3. Se configuro el achivo pom de esta forma: 
 
 ```
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.escuelaing.arep.parcial.app</groupId>
-  <artifactId>Parcial1</artifactId>
-  <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>Parcial1</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-     <maven.compiler.source>1.8</maven.compiler.source>
-     <maven.compiler.target>1.8</maven.compiler.target>
-</properties>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-	<dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-	<dependency>
-        <groupId>com.sparkjava</groupId>
-        <artifactId>spark-core</artifactId>
-        <version>2.7.2</version>
-    </dependency>
-  </dependencies>
-  <reporting>
-	<plugins>
-	<plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-javadoc-plugin</artifactId>
-	<version>2.10.1</version>
-	</plugin>
-	</plugins>
-  </reporting>
-	<build>
-        <plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-javadoc-plugin</artifactId>
-			<version>2.10.1</version>
-		</plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.0.2</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <mainClass>edu.escuelaing.arep.Lab1.app.App</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.7.0</version>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-                <optimize>true</optimize>
-                <debug>true</debug>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <version>3.0.2</version>
-            <executions>
-                <execution>
-                    <id>copy-dependencies</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>copy-dependencies</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-        </plugins>
-    </build>
-</project>
+
 ```
 
 4. Posteriormente se realizo el desarrollo de cada una de las clases que se deseaban y requerian para el correcto funcioamiento, resumiendose en los componentes y la Aplicacion principal
@@ -170,25 +83,61 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.261-b12, mixed mode)
 
 ## Enunciado
 
-TALLER DE VERIFICACIÓN DE CONOCIMIENTOS TÉCNICOS
-REQUERIMIENTOS
-Su compañía lo ha seleccionado para construir un simple webservice desplegada en Heroku para uno de los clientes más importantes.
+Diseñé, construya y despliegue los siguientes servicios en un microcontenedor docker desplegado en una instancei a EC2 de AWS. Cada estudiante debe seleccionar para desarrollar dos funciones matemáticas de acuerdo a los dos últimos dígitos de su cédula como se especifica en la lista. Todas las funciones reciben un solo parámetro de tipo "Double" y retornan una prámetro sde tipo "Double".
 
-Así, han decidido que usted debe construir un webservice  para consultar el estado del clima en lugares específicos de la tierra.  El servicio web recibirá en un campo la descripción de una ciudad, por ejemplo “London” para Londres   y deberá mostrar la información del clima para esa ciudad. Para esto utilice el API gratuito de https://openweathermap.org/ (Puede crear una cuenta para obtener la llave para realizar consultas). Se le pide que su implementación sea eficiente en cuanto a recursos así que debe implementar un caché que permita evitar hacer consultas repetidas al API externo. La petición debe pasar por su servicio web desplegado en Heroku, es decir desde su servicio en Heroku se debe invocar el servicio web de clima. El usuario no sabrá qué servicio está usted invocando por detrás. Utilice el servicio "Current Weather Data".
 
-Debe usar spark o sockets.
+0. log
 
-El API de su servicio debe ser el siguiente:
-{url del servicio en heroku}/clima?lugar={ciudad o lugar}
+1. ln
 
-El servicio debe reornar un Json exactamente igual al que retorna el servicio de openweathermap denominado "Current Weather Data". Asegurese que el tipo de retorno sea Json.
+2. sin
 
-Sugerencia realice la implementación de manera incremental. Haga commits regulares.
+3. cos
 
-Entregue todo en GIT HUB y el enlace a Heroku.
+4. tan
 
-JSON
-https://www.w3schools.com/js/js_json_syntax.asp
+5. acos
+
+6. asin
+
+7. atan
+
+8. sqrt
+
+9. exp (el número de eauler elevado ala potendia del parámetro)
+
+
+Implemente los servicios para responder al método de solicitud HTTP GET. Deben usar el nombre de la función especificado en la lista y el parámetro debe ser pasado en la variable de query con nombre "value".
+
+
+Ejemplo de una llamado:
+
+https://amazonxxx.x.xxx.x.xxx:{port}/cos?value=3.141592
+
+
+Salida. El formato de la salida y la respuesta debe ser un JSON con el siguiente formato
+
+{
+
+ "operation": "cos",
+
+ "input":  3.141592,
+
+ "output":  -0.999999
+
+}
+
+
+Entregable:
+
+1. Proyecto actualizado en github
+
+2. Descripción del proyecto enel README con pantalazos que muestren el funcionamiento.
+
+3. Descripción de como correrlo en EC2
+
+4. Video de menos de un minuto del funcionamiento (lo puede tomar con el celular una vez funcione)
+
 
 
 ## Pruebas
@@ -208,13 +157,15 @@ usando este codigo como proyeccion de las pruebas que se realizaron:
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Git](https://git-scm.com/) - Used to execute, test and compile as console
 * [Heroku] (https://heroku.com) - Used to deploy
+* [ASW](https://www.awseducate.com/student/s/)- Used to
+* [Docker](https://www.docker.com/) - Used to 
 
 ## Control de versiones
 
 por: [Santiago Buitrago](https://github.com/DonSantiagoS) 
 
 Version: 1.0
-Fecha: 17 de febrero 2021
+Fecha: 24 de marzo 2021
 
 ## Autor
 

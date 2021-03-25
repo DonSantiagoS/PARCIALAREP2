@@ -17,19 +17,29 @@ import java.lang.Math;
  */
 
 public class operacion {
-
-
+	
+	private String operacion;
+	private Double input;
+	private Double output;
+	 
+	
     public operacion() {
 
     }
 
     public Double getLog(Double solicitud) {
         Double respuesta=Math.log10(solicitud);
+		input=solicitud;
+		output=respuesta;
+		operacion="log";
         return respuesta;
     }
 
     public Double getAcos(Double solicitud) {
         Double respuesta=Math.acos(solicitud);
+		input=solicitud;
+		output=respuesta;
+		operacion="acos";
         return respuesta;
     }
 }
